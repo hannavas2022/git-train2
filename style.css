@@ -1,0 +1,70 @@
+body {
+  font-family: "Merriweather", serif;
+  color: #5a6275;
+}
+form {
+  margin-bottom: 50px;
+}
+#inputtown {
+  width: 600px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+  margin: 30px 0 30px 40px;
+  border: 1px solid #acaeb1;
+}
+#buttonLocation {
+  padding: 10px;
+  text-align: center;
+  color: rgb(192, 192, 124);
+  font-size: 14px;
+  text-decoration: bold;
+  background-color: #5f70cc;
+  border-radius: 10px;
+  border: 1px solid #acaeb1;
+}
+.currenttown {
+  color: #5f70cc;
+  text-decoration: bold;
+  font-size: 40px;
+}
+.nextdays {
+  text-decoration: bold;
+  font-size: 25px;
+}
+.currentdate {
+  font-size: 14px;
+}
+.currentdate,
+.currenttown,
+.temperature,
+.humidity,
+.wind,
+.visibility {
+  text-align: left;
+}
+.humidity,
+.wind,
+.visibility,
+.temperature {
+  font-size: 18px;
+}
+.temperature {
+  text-decoration: bold;
+}
+#todaytemperature {
+  font-size: 25px;
+}
+.nextdaystemperatute {
+  font-size: 18px;
+}
+img {
+  height: 80px;
+}
+.weather-app {
+  border: 1px solid #acaeb1;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: -20px 5px;
+}
