@@ -32,69 +32,72 @@
       />
       <input type="submit" value="Search" id="searchbutton" />
     </form>
-
-    <div class="container text-center">
-      <div class="weather-app">
-        <div class="row row-cols-7">
-          <div class="col-3">
-            <p class="currenttown"></p>
-            <p class="currentdate"></p>
-            <p class="temperature">
-              <span id="todayTemperature"></span>
-              <a href="#" id="celsius">ºC</a>|<a href="#" id="fahrenheit">ºF</a>
+    <div>
+      <div class="container text-center">
+        <div class="weather-app">
+          <div class="row row-cols-7">
+            <div class="col-3">
+              <p class="currenttown"></p>
+              <p class="currentdate"></p>
+              <p class="temperature">
+                <span id="todayTemperature"></span>
+                <a href="#" id="celsius">ºC</a>|<a href="#" id="fahrenheit"
+                  >ºF</a
+                >
+                <img src="IMG/rain.jpg" alt="Rain" />
+                <span id="condition"></span>
+              </p>
+              <p class="humidity">Humidity: <span id="hum"></span>%</p>
+              <p class="wind">Wind: SW <span id="speed"></span> km/h</p>
+              <p class="visibility">Visibility: <span id="vis"></span> km</p>
+            </div>
+            <div class="col">
+              <p class="nextdays">Sun<br />18 Sep</p>
+              <img src="IMG/suncloud.jpg" alt="SunCloud" />
+              <p class="nextdaystemperatute">+22°C</p>
+              <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
+              <p class="nextdaystemperatute">+8°C</p>
+            </div>
+            <div class="col">
+              <p class="nextdays">Mon<br />19 Sep</p>
+              <img src="IMG/sunrain.jpg" alt="SunRain" />
+              <p class="nextdaystemperatute">+21°C</p>
               <img src="IMG/rain.jpg" alt="Rain" />
-              <span id="condition"></span>
-            </p>
-            <p class="humidity">Humidity: <span id="hum"></span>%</p>
-            <p class="wind">Wind: SW <span id="speed"></span> km/h</p>
-            <p class="visibility">Visibility: <span id="vis"></span> km</p>
-          </div>
-          <div class="col">
-            <p class="nextdays">Sun<br />18 Sep</p>
-            <img src="IMG/suncloud.jpg" alt="SunCloud" />
-            <p class="nextdaystemperatute">+22°C</p>
-            <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
-            <p class="nextdaystemperatute">+8°C</p>
-          </div>
-          <div class="col">
-            <p class="nextdays">Mon<br />19 Sep</p>
-            <img src="IMG/sunrain.jpg" alt="SunRain" />
-            <p class="nextdaystemperatute">+21°C</p>
-            <img src="IMG/rain.jpg" alt="Rain" />
-            <p class="nextdaystemperatute">+12°C</p>
-          </div>
-          <div class="col">
-            <p class="nextdays">Tue<br />20 Sep</p>
-            <img src="IMG/sunnyday.jpg" alt="SunnyDay" />
-            <p class="nextdaystemperatute">+18°C</p>
-            <img src="IMG/rain.jpg" alt="Rain" />
-            <p class="nextdaystemperatute">+8°C</p>
-          </div>
-          <div class="col">
-            <p class="nextdays">Wen<br />21 Sep</p>
-            <img src="IMG/rain.jpg" alt="Rain" />
-            <p class="nextdaystemperatute">+14°C</p>
+              <p class="nextdaystemperatute">+12°C</p>
+            </div>
+            <div class="col">
+              <p class="nextdays">Tue<br />20 Sep</p>
+              <img src="IMG/sunnyday.jpg" alt="SunnyDay" />
+              <p class="nextdaystemperatute">+18°C</p>
+              <img src="IMG/rain.jpg" alt="Rain" />
+              <p class="nextdaystemperatute">+8°C</p>
+            </div>
+            <div class="col">
+              <p class="nextdays">Wen<br />21 Sep</p>
+              <img src="IMG/rain.jpg" alt="Rain" />
+              <p class="nextdaystemperatute">+14°C</p>
 
-            <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
-            <p class="nextdaystemperatute">+3°C</p>
-          </div>
-          <div class="col">
-            <p class="nextdays">Thu<br />22 Sep</p>
-            <img src="IMG/sunnyday.jpg" alt="SunnyDay" />
-            <p class="nextdaystemperatute">+18°C</p>
-            <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
-            <p class="nextdaystemperatute">+7°C</p>
+              <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
+              <p class="nextdaystemperatute">+3°C</p>
+            </div>
+            <div class="col">
+              <p class="nextdays">Thu<br />22 Sep</p>
+              <img src="IMG/sunnyday.jpg" alt="SunnyDay" />
+              <p class="nextdaystemperatute">+18°C</p>
+              <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
+              <p class="nextdaystemperatute">+7°C</p>
+            </div>
           </div>
         </div>
       </div>
+      <br />
+      <small id="footer">
+        <a href="https://github.com/hannavas2022/git-train2" target="_blank"
+          >Open-source code</a
+        >
+        by Hanna Vasylets
+      </small>
     </div>
-    <br />
-    <small id="footer">
-      <a href="https://github.com/hannavas2022/git-train2" target="_blank"
-        >Open-source code</a
-      >
-      by Hanna Vasylets
-    </small>
     <script src="script.js"></script>
   </body>
 </html>
