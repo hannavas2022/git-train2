@@ -59,6 +59,12 @@ function showTemperature(response) {
   document.querySelector("#vis").innerHTML = response.data.visibility / 1000;
   document.querySelector("#condition").innerHTML =
     response.data.weather[0].main;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 //function currentLocation(position) {
 //let apiKey = "9cb72bec958f8fb02391985ed7b219d2";
