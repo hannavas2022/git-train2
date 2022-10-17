@@ -66,6 +66,28 @@ function showTemperature(response) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 }
+//Units
+
+function getFahrTemp(event) {
+  event.preventDefault();
+  let celTemp = document.querySelector("#todayTemperature");
+  let fahrTemp = Math.round((celTemp.innerHTML * 9) / 5 + 32);
+  celTemp.innerHTML = fahrTemp;
+}
+
+function getCelTemp(event) {
+  event.preventDefault();
+  let celTemp = document.querySelector("#todayTemperature");
+  celTemp.innerHTML = Math.floor(celTemp);
+}
+
+let celTemp = null;
+
+let fahrTempLink = document.querySelector("#fahrenheit");
+fahrTempLink.addEventListener("click", getFahrTemp);
+
+let celTempLink = document.querySelector("#celsius");
+celTempLink.addEventListener("click", getCelTemp);
 //function currentLocation(position) {
 //let apiKey = "9cb72bec958f8fb02391985ed7b219d2";
 //let apiLink = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
@@ -94,21 +116,3 @@ function showTemperature(response) {
 //}
 //let button = document.querySelector(`#buttonLocation`);
 //button.addEventListener("click", getCurrentLocation);
-
-//let celTempLink = document.querySelector("#celsius");
-//let fahrTempLink = document.querySelector("#fahrenheit");
-
-//function getFahrTemp(event) {
-//event.preventDefault();
-//let celTemp = document.querySelector("#todayTemperature");
-//let fahrTemp = Math.round((celTemp.innerHTML * 9) / 5 + 32);
-//celTemp.innerHTML = fahrTemp;
-//}
-//function getCelTemp(event) {
-//event.preventDefault();
-//let celTemp = document.querySelector("#todayTemperature");
-//celTemp.innerHTML = Math.floor(fahrTemp);
-//}
-
-//fahrTempLink.addEventListener("click", getFahrTemp);
-//celTempLink.addEventListener("click", getCelTemp);
