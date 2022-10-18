@@ -72,13 +72,13 @@ function getFahrTemp(event) {
   event.preventDefault();
   let celTemp = document.querySelector("#todayTemperature");
   let fahrTemp = Math.round((celsiusTemp * 9) / 5 + 32);
-  celTemp.innerHTML = fahrTemp;
+  celTemp.innerHTML = celsiusTemp;
 }
 
 function getCelTemp(event) {
   event.preventDefault();
   let celTemp = document.querySelector("#todayTemperature");
-  celTemp.innerHTML = Math.floor(celTemp);
+  celTemp.innerHTML = Math.round(celTemp);
 }
 
 let celsiusTemp = null;
