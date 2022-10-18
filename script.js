@@ -71,6 +71,8 @@ function showTemperature(response) {
 function getFahrTemp(event) {
   event.preventDefault();
   let celTemp = document.querySelector("#todayTemperature");
+  celTempLink.classList.remove("active");
+  fahrTempLink.classList.add("active");
   let fahrTemp = (celsiusTemp * 9) / 5 + 32;
   celTemp.innerHTML = Math.round(fahrTemp);
 }
@@ -78,6 +80,8 @@ function getFahrTemp(event) {
 function getCelTemp(event) {
   event.preventDefault();
   let celTemp = document.querySelector("#todayTemperature");
+  fahrTempLink.classList.remove("active");
+  celTempLink.classList.add("active");
   celTemp.innerHTML = Math.round(celsiusTemp);
 }
 
