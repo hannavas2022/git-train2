@@ -74,3 +74,10 @@ img {
   padding: 10px;
   text-align: center;
 }
+.weather-app .active {
+  color: #5a6275;
+  cursor: default;
+}
+.weather-app .active:hover {
+  text-decoration: none;
+}
