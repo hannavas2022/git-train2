@@ -49,9 +49,9 @@ function searchCity(city) {
 }
 
 function showTemperature(response) {
-  document.querySelector("#todayTemperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemp = response.data.main.temp;
+  document.querySelector("#todayTemperature").innerHTML =
+    Math.round(celsiusTemp);
   document.querySelector("#hum").innerHTML = response.data.main.humidity;
   document.querySelector("#speed").innerHTML = Math.round(
     response.data.wind.speed
@@ -71,7 +71,7 @@ function showTemperature(response) {
 function getFahrTemp(event) {
   event.preventDefault();
   let celTemp = document.querySelector("#todayTemperature");
-  let fahrTemp = Math.round((celTemp.innerHTML * 9) / 5 + 32);
+  let fahrTemp = Math.round((celsiusTemp * 9) / 5 + 32);
   celTemp.innerHTML = fahrTemp;
 }
 
@@ -81,7 +81,7 @@ function getCelTemp(event) {
   celTemp.innerHTML = Math.floor(celTemp);
 }
 
-let celTemp = null;
+let celsiusTemp = null;
 
 let fahrTempLink = document.querySelector("#fahrenheit");
 fahrTempLink.addEventListener("click", getFahrTemp);
