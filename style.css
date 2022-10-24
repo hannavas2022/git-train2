@@ -48,12 +48,12 @@ form {
 .wind,
 .visibility,
 .temperature {
-  font-size: 18px;
+  font-size: 14px;
 }
 .temperature {
   text-decoration: bold;
 }
-#todaytemperature {
+#todayTemperature {
   font-size: 25px;
 }
 .nextdaystemperatute {
