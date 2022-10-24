@@ -68,15 +68,15 @@ function showTemperature(response) {
 }
 //Units
 
-function getCelTemp(event) {
-  event.preventDefault();
-  let celTemp = document.querySelector("#todayTemperature");
-  fahrTempLink.classList.remove("active");
-  celTempLink.classList.add("active");
-  celTemp.innerHTML = Math.round(celsiusTemp);
-}
+//function getCelTemp(event) {
+//event.preventDefault();
+//let celTemp = document.querySelector("#todayTemperature");
+//fahrTempLink.classList.remove("active");
+//celTempLink.classList.add("active");
+//celTemp.innerHTML = Math.round(celsiusTemp);
+//}
 
-let celsiusTemp = null;
+//let celsiusTemp = null;
 
-let celTempLink = document.querySelector("#celsius");
-celTempLink.addEventListener("click", getCelTemp);
+//let celTempLink = document.querySelector("#celsius");
+//celTempLink.addEventListener("click", getCelTemp);
