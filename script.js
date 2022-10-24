@@ -66,17 +66,19 @@ function showTemperature(response) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 }
-//Units
 
-//function getCelTemp(event) {
-//event.preventDefault();
-//let celTemp = document.querySelector("#todayTemperature");
-//fahrTempLink.classList.remove("active");
-//celTempLink.classList.add("active");
-//celTemp.innerHTML = Math.round(celsiusTemp);
-//}
-
-//let celsiusTemp = null;
-
-//let celTempLink = document.querySelector("#celsius");
-//celTempLink.addEventListener("click", getCelTemp);
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  forecastHTML =
+    forecastHTML +
+    `
+ <div class="col">
+  <p class="nextdays">Sun<br />18 Sep</p>
+              <img src="IMG/suncloud.jpg" alt="SunCloud" />
+              <p class="nextdaystemperatute">°C</p>
+              <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
+              <p class="nextdaystemperatute">°C</p>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
