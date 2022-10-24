@@ -96,7 +96,7 @@ function displayForecast(response) {
       <div class="col">
    <p class="nextdays">${formatDay(forecastDay.dt)}<br /></p>
               <img src="http://openweathermap.org/img/wn/${
-                response.data.weather[0].icon
+                forecastDay.weather[0].icon
               }@2x.png"/>
               <p class="nextdaystemperatute">${Math.round(
                 forecastDay.temp.max
