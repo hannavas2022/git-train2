@@ -68,15 +68,6 @@ function showTemperature(response) {
 }
 //Units
 
-function getFahrTemp(event) {
-  event.preventDefault();
-  let celTemp = document.querySelector("#todayTemperature");
-  celTempLink.classList.remove("active");
-  fahrTempLink.classList.add("active");
-  let fahrTemp = (celsiusTemp * 9) / 5 + 32;
-  celTemp.innerHTML = Math.round(fahrTemp);
-}
-
 function getCelTemp(event) {
   event.preventDefault();
   let celTemp = document.querySelector("#todayTemperature");
@@ -87,36 +78,5 @@ function getCelTemp(event) {
 
 let celsiusTemp = null;
 
-let fahrTempLink = document.querySelector("#fahrenheit");
-fahrTempLink.addEventListener("click", getFahrTemp);
-
 let celTempLink = document.querySelector("#celsius");
 celTempLink.addEventListener("click", getCelTemp);
-//function currentLocation(position) {
-//let apiKey = "9cb72bec958f8fb02391985ed7b219d2";
-//let apiLink = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
-
-// axios.get(apiLink).then(showTemperature);
-//}
-
-//function getCurrentLocation(event) {
-// event.preventDefault();
-// navigator.geolocation.getCurrentPosition(currentLocation);
-//}
-
-//let button = document.querySelector(`#buttonLocation`);
-//button.addEventListener("click", getCurrentLocation);
-
-//CurrentLocation
-//function currentLocation(position) {
-//let lat = position.coords.latitude;
-//let lon = position.coords.longitude;
-//let apiKey = "9cb72bec958f8fb02391985ed7b219d2";
-//let apiLink = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-//axios.get(apiLink).then(showTemperature);
-//}
-
-//
-//}
-//let button = document.querySelector(`#buttonLocation`);
-//button.addEventListener("click", getCurrentLocation);
