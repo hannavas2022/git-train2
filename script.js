@@ -69,16 +69,22 @@ function showTemperature(response) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = "";
-  forecastHTML =
-    forecastHTML +
-    `
- <div class="col">
-  <p class="nextdays">Sun<br />18 Sep</p>
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wen", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col">
+   <p class="nextdays">${day}<br /></p>
               <img src="IMG/suncloud.jpg" alt="SunCloud" />
               <p class="nextdaystemperatute">°C</p>
               <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
-              <p class="nextdaystemperatute">°C</p>`;
+              <p class="nextdaystemperatute">°C</p>
+              </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 displayForecast();
