@@ -31,7 +31,7 @@ form {
 }
 .nextdays {
   text-decoration: bold;
-  font-size: 25px;
+  font-size: 20px;
 }
 .currentdate {
   font-size: 14px;
@@ -57,7 +57,7 @@ form {
   font-size: 25px;
 }
 .nextdaystemperatute {
-  font-size: 18px;
+  font-size: 14px;
 }
 img {
   height: 80px;
@@ -80,4 +80,7 @@ img {
 }
 .weather-app .active:hover {
   text-decoration: none;
+}
+div .forecast {
+  margin-top: 40px;
 }
