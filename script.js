@@ -29,6 +29,13 @@ let months = [
 let month = months[now.getMonth()];
 currentDate.innerHTML = `${day}, ${date} ${month}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 //City
 
 function searchTown(event) {
@@ -81,17 +88,24 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
       <div class="col">
-   <p class="nextdays">${forecastDay.dt}<br /></p>
-              <img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"/>
-              <p class="nextdaystemperatute">${forecastDay.temp.max}°C</p>
-              <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
-              <p class="nextdaystemperatute">${forecastDay.temp.min}°C</p>
+   <p class="nextdays">${formatDay(forecastDay.dt)}<br /></p>
+              <img src="http://openweathermap.org/img/wn/${
+                response.data.weather[0].icon
+              }@2x.png"/>
+              <p class="nextdaystemperatute">${Math.round(
+                forecastDay.temp.max
+              )}°C</p>
+              <p class="nextdaystemperatute">${Math.round(
+                forecastDay.temp.min
+              )}°C</p>
               </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
