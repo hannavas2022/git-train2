@@ -42,12 +42,19 @@ let form = document.querySelector("form");
 form.addEventListener("submit", searchTown);
 
 function searchCity(city) {
-  let apiKey = "9cb72bec958f8fb02391985ed7b219d2";
+  let apiKey = "2718952144ed077c12e7c160fb6fc351";
   let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   axios.get(apiLink).then(showTemperature);
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "2718952144ed077c12e7c160fb6fc351";
+  let apiLink = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiLink);
+  axios.get(apiLink).then(displayForecast);
+}
 function showTemperature(response) {
   celsiusTemp = response.data.main.temp;
   document.querySelector("#todayTemperature").innerHTML =
@@ -65,26 +72,28 @@ function showTemperature(response) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+
+  getForecast(response.data.coord);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wen", "Thu"];
-  days.forEach(function (day) {
+
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
       <div class="col">
-   <p class="nextdays">${day}<br /></p>
-              <img src="IMG/suncloud.jpg" alt="SunCloud" />
-              <p class="nextdaystemperatute">°C</p>
+   <p class="nextdays">${forecastDay.dt}<br /></p>
+              <img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"/>
+              <p class="nextdaystemperatute">${forecastDay.temp.max}°C</p>
               <img src="IMG/clearmoon.jpg" alt="ClearMoon" />
-              <p class="nextdaystemperatute">°C</p>
+              <p class="nextdaystemperatute">${forecastDay.temp.min}°C</p>
               </div>`;
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
